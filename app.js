@@ -9,6 +9,9 @@ startBtnEl.addEventListener('click', start);
 restartBtnEl.addEventListener('click', restart);
 giveUpBtnEl.addEventListener('click', giveUp);
 
+//moves counter
+let moves = 20;
+
 function giveUp() {
     //shows all the hidden cards and the appropriate buttons + message for losing the game
     if (winLoseEl.textContent != 'You awakaned your Mangekyo sharingan!') {
@@ -25,8 +28,9 @@ function giveUp() {
 }
 
 function restart() {
-    //restarts the game by randomizing the grid and hiding the cards + showing appropriate message
-    winLoseEl.textContent = '';
+    //restarts the game by randomizing the grid,hiding the cards and resets the moves + showing appropriate message
+    moves = 20;
+    winLoseEl.textContent = `You got ${moves} moves!`;
 
     giveUpBtnEl.classList.remove('hidden');
 
@@ -121,7 +125,8 @@ function matchCheck() {
         selectedElements.forEach(el => el.classList.remove('select'));
         return;
     } else if (selectedElements.length == 2) {
-
+        moves -= 1;
+        console.log(moves);
         let firstName = selectedElements[0].querySelectorAll('h2')[0];
         let secondName = selectedElements[1].querySelectorAll('h2')[0];
 
@@ -143,6 +148,7 @@ function matchCheck() {
             })
         }, 500);
     };
+    movesTracker();
     isDone();
 }
 
@@ -176,6 +182,14 @@ function isDone() {
         giveUpBtnEl.classList.add('hidden');
         winLoseEl.textContent = 'You awakaned your Mangekyo sharingan!';
     };
+}
+
+function movesTracker() {
+    //tracks the moves and if you have none you lose
+    winLoseEl.textContent = `You got ${moves} moves!`
+    if (moves == 0){
+        giveUp();
+    }
 }
 
 
