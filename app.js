@@ -2,34 +2,35 @@
 let restartBtnEl = document.getElementById('restart');
 let giveUpBtnEl = document.getElementById('giveUp');
 let winLoseEl = document.getElementById('winLose');
+let cardsGridElement = document.querySelector('#cardsGrid');
 
 //adding event listeners
 restartBtnEl.addEventListener('click', restart);
 giveUpBtnEl.addEventListener('click', giveUp);
+cardsGridElement.addEventListener('click', selection);
 
 //moves counter
 let moves = 10;
 
 start();
+
 function giveUp() {
     //shows all the hidden cards and the appropriate buttons + message for losing the game
     winLoseEl.textContent = 'You disgrace!';
-
     giveUpBtnEl.classList.add('hidden');
-
-    let cardsGridElement = document.getElementById('cardsGrid');
     cardsGridElement.removeEventListener('click', selection);
 
-    let allCardsArr = document.querySelectorAll('.card');
-    allCardsArr.forEach(el => unhide(el));
+    let cardsArr = document.querySelectorAll('.card');
+    cardsArr.forEach(el => unhide(el));
 }
 
 function restart() {
     //restarts the game by randomizing the grid, hiding the cards and resets the moves + showing appropriate message
     moves = 10;
     winLoseEl.textContent = `You got ${moves} moves!`;
-
     giveUpBtnEl.classList.remove('hidden');
+    cardsGridElement.addEventListener('click', selection);
+
 
     let cardsArr = document.querySelectorAll('.card');
     cardsArr.forEach(c => {
@@ -53,15 +54,10 @@ function restart() {
         };
     };
 
-    let allCardsArr = Array.from(document.querySelectorAll('.card'));
-    let cardsGridElement = document.querySelector('#cardsGrid');
+    randomize(cardsArr);
+
     let allCardsFragment = document.createDocumentFragment();
-    cardsGridElement.addEventListener('click', selection);
-
-    allCardsArr.forEach(c => c.remove());
-    randomize(allCardsArr);
-
-    allCardsArr.forEach(el => allCardsFragment.appendChild(el));
+    cardsArr.forEach(el => allCardsFragment.appendChild(el));
     cardsGridElement.appendChild(allCardsFragment);
 }
 
@@ -150,24 +146,20 @@ function matchCheck() {
 function start() {
     //starts the game by randomizing the grid and showing appropriate buttons
     let allCardsArr = Array.from(document.querySelectorAll('.card'));
-    let cardsGridElement = document.querySelector('#cardsGrid');
-    cardsGridElement.addEventListener('click', selection);
+    let allCardsFragment = document.createDocumentFragment();
 
-    allCardsArr.forEach(c => c.remove());
     randomize(allCardsArr);
 
-    let allCardsFragment = document.createDocumentFragment();
     allCardsArr.forEach(el => allCardsFragment.appendChild(el));
-
     cardsGridElement.appendChild(allCardsFragment);
     matchCheck();
 }
 
 function isDone() {
     //checks if the game has finished and shows appropriate buttons + message for winning the game
-    let allCardsArr = document.querySelectorAll('.success');
+    let successArr = document.querySelectorAll('.success');
 
-    if (allCardsArr.length == 10) {
+    if (successArr.length == 10) {
         restartBtnEl.classList.remove('hidden');
         giveUpBtnEl.classList.add('hidden');
         winLoseEl.textContent = 'You awakaned your Mangekyo sharingan!';
