@@ -2,23 +2,26 @@ body {
     text-align: center;
     background-color: black;
     color: darkred;
-    margin:0px;
-	padding:0px;
-    font-family: monospace;
-    font-weight: bold;
+    margin: 0px;
+	padding: 0px;
+    font-family: cursive;
+}
+
+#winLose {
+    color: lightslategrey;
 }
 
 .title{
     margin-top: 0;
-    background-color: darkred;
+    background-color: lightslategray;
     color: black;
     text-align: left;
     padding-left: 10px;
 }
 
 .footer {
-    background-color:darkred;
-    color:black;
+    background-color: lightslategray;
+    color: black;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -27,15 +30,15 @@ body {
 }
 
 .select {
-        background-color: dimgray !important;
-        color:black !important;
+        background-color: grey !important;
+        color: black !important;
         box-shadow: black -5px 5px;
         transition-duration: 0.3s;
 }
 
 .success {
-    background-color: purple !important;
-    color:black;
+    background-color: lightslategray !important;
+    color: black;
 }
 
 /* cards */
@@ -51,59 +54,44 @@ body {
 }
 
 .card:hover {
-    background-color: darkgray;
-    color:darkred;
+    background-color: darkgrey;
+    color: black;
     box-shadow: darkred -5px 5px;
     transition-duration: 0.3s;
 }
 
 .giveUpBtnNav{
     float: right;
-    margin-top: 3px;
+    margin-top: 8px;
     margin-right: 10px;
-    background: red;
-    border: 3px solid red;
+    background: darkgrey;
+    border: 3px solid darkgrey;
     color: black;
-    font-weight: bold;
-}
-
-.startBtnNav{
-    float: right;
-    margin-top: 3px;
-    margin-right: 10px;
-    background:yellow;
-    border: 3px solid yellow;
-    color: black;
+    font-family: cursive;
     font-weight: bold;
 }
 
 .restartBtnNav{
     float: right;
-    margin-top: 3px;
+    margin-top: 8px;
     margin-right: 10px;
-    background:darkgrey;
-    border: 3px solid darkgrey;
+    background: yellow;
+    border: 3px solid yellow;
     color: black;
+    font-family: cursive;
     font-weight: bold;
 }
 
 .giveUpBtnNav:hover {
-    background-color: red;
-    color:black;
-    box-shadow: black -5px 5px;
-    transition-duration: 0.3s;
-}
-
-.startBtnNav:hover {
-    background-color: yellow;
-    color:black;
+    background-color: darkgrey;
+    color: black;
     box-shadow: black -5px 5px;
     transition-duration: 0.3s;
 }
 
 .restartBtnNav:hover {
-    background-color: darkgrey;
-    color:black;
+    background-color: yellow;
+    color: black;
     box-shadow: black -5px 5px;
     transition-duration: 0.3s;
 }
