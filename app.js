@@ -32,7 +32,7 @@ function restart() {
     cardsGridElement.addEventListener('click', selection);
 
 
-    let cardsArr = document.querySelectorAll('.card');
+    let cardsArr = Array.from(document.querySelectorAll('.card'));
     cardsArr.forEach(c => {
         c.classList.remove('success');
         c.classList.remove('select');
@@ -145,12 +145,12 @@ function matchCheck() {
 
 function start() {
     //starts the game by randomizing the grid and showing appropriate buttons
-    let allCardsArr = Array.from(document.querySelectorAll('.card'));
+    let cardsArr = Array.from(document.querySelectorAll('.card'));
     let allCardsFragment = document.createDocumentFragment();
 
-    randomize(allCardsArr);
+    randomize(cardsArr);
 
-    allCardsArr.forEach(el => allCardsFragment.appendChild(el));
+    cardsArr.forEach(el => allCardsFragment.appendChild(el));
     cardsGridElement.appendChild(allCardsFragment);
     matchCheck();
 }
