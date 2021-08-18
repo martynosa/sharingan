@@ -27,7 +27,7 @@ function giveUp() {
 function restart() {
     //restarts the game by randomizing the grid, hiding the cards and resets the moves + showing appropriate message
     moves = 10;
-    winLoseEl.textContent = `You got ${moves} moves!`;
+    winLoseEl.textContent = `You got ${moves} moves... Go!`;
     giveUpBtnEl.classList.remove('hidden');
     cardsGridElement.addEventListener('click', selection);
 
@@ -64,12 +64,10 @@ function restart() {
 function randomize(arr) {
     //randomizes the grid of cards
     let currentIndex = arr.length, randomIndex;
-    // While there remain elements to shuffle...
+
     while (0 !== currentIndex) {
-        // Picks a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-        // And swaps it with the current element.
         [arr[currentIndex], arr[randomIndex]] = [
             arr[randomIndex], arr[currentIndex]];
     }
@@ -168,7 +166,7 @@ function isDone() {
 
 function movesTracker() {
     //tracks the moves and if you have none you lose
-    moves == 10 ? winLoseEl.textContent = `You got ${moves} moves!` : winLoseEl.textContent = `You got ${moves} moves left!`;
+    moves == 10 ? winLoseEl.textContent = `You got ${moves} moves... Go!` : winLoseEl.textContent = `You got ${moves} moves left!`;
     return moves == 0 ? true : false;
 }
 
