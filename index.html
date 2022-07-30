@@ -1,157 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="myStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap"
+      rel="stylesheet"
+    />
     <title>Sharingan!</title>
-    <link rel="stylesheet" href="myStyle.css">
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- header -->
     <div class="header">
-        <button id="restart" class="restartBtnNav">restart</button>
-        <button id="giveUp" class="giveUpBtnNav">give up</button>
-        <h1 class="title">Sharingan!</h1>
-        <h2 id="winLose"></h2>
-        <img src="./img/eyesGif.gif" alt="eyesGif">
+      <button id="restart" class="restartBtnNav">restart</button>
+      <button id="giveUp" class="giveUpBtnNav">give up</button>
+      <h1 class="title">Sharingan!</h1>
+      <h2 id="winLose"></h2>
+      <img src="./img/eyesGif.gif" alt="eyesGif" />
     </div>
     <!-- cards first 5 -->
     <div id="cardsGrid" class="cards">
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Sasuke</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan1.jpg" alt="sasuke">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Itachi</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan2.jpg" alt="itachi">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Shisui</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan3.jpg" alt="shisui">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Madara</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan4.jpg" alt="madara">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <article class="card">
-            <header>
-                <h2 class="hidden">Izuna</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan5.jpg" alt="izuna">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Sasuke</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan1.jpg" alt="sasuke">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Itachi</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan2.jpg" alt="itachi">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Shisui</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan3.jpg" alt="shisui">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <!-- card -->
-        <article class="card">
-            <header>
-                <h2 class="hidden">Madara</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan4.jpg" alt="madara">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
-        <article class="card">
-            <header>
-                <h2 class="hidden">Izuna</h2>
-                <h2>Uchiha</h2>
-            </header>
-            <div>
-                <img class="hidden" src="./img/sharingan5.jpg" alt="izuna">
-                <img src="./img/uchiha.jpg" alt="uchiha">
-            </div>
-            <footer class="cardFooter">
-            </footer>
-        </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Sasuke</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan1.jpg" alt="sasuke" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Itachi</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan2.jpg" alt="itachi" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Shisui</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan3.jpg" alt="shisui" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Madara</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan4.jpg" alt="madara" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <article class="card">
+        <header>
+          <h2 class="hidden">Izuna</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan5.jpg" alt="izuna" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Sasuke</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan1.jpg" alt="sasuke" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Itachi</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan2.jpg" alt="itachi" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Shisui</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan3.jpg" alt="shisui" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <!-- card -->
+      <article class="card">
+        <header>
+          <h2 class="hidden">Madara</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan4.jpg" alt="madara" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
+      <article class="card">
+        <header>
+          <h2 class="hidden">Izuna</h2>
+          <h2>Uchiha</h2>
+        </header>
+        <div>
+          <img class="hidden" src="./img/sharingan5.jpg" alt="izuna" />
+          <img src="./img/uchiha.jpg" alt="uchiha" />
+        </div>
+        <footer class="cardFooter"></footer>
+      </article>
     </div>
     <!-- footer -->
     <footer class="footer">made by martynosa</footer>
     <script src="./app.js"></script>
-</body>
-
+  </body>
 </html>

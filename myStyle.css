@@ -1,111 +1,99 @@
 body {
-    text-align: center;
-    background-color: black;
-    color: darkred;
-    margin: 0px;
-	padding: 0px;
-    font-family: cursive;
+  font-family: 'Mochiy Pop One', sans-serif;
+  text-align: center;
+  background-color: black;
+  color: darkred;
+  margin: 0px;
+  padding: 0px;
 }
 
 #winLose {
-    color: lightslategrey;
+  color: lightslategrey;
 }
 
-.title{
-    margin-top: 0;
-    background-color: lightslategray;
-    color: black;
-    text-align: left;
-    padding-left: 10px;
+.title {
+  margin-top: 0;
+  background-color: lightslategray;
+  color: black;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .footer {
-    background-color: lightslategray;
-    color: black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  background-color: lightslategray;
+  color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .select {
-        background-color: grey !important;
-        color: black !important;
-        box-shadow: black -5px 5px;
-        transition-duration: 0.3s;
+  background-color: grey !important;
+  color: black !important;
+  box-shadow: black -5px 5px;
+  transition-duration: 0.3s;
 }
 
 .success {
-    background-color: lightslategray !important;
-    color: black;
+  background-color: lightslategray !important;
+  color: black;
 }
 
 /* cards */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
 }
 
 .card {
-    display: grid;
-    grid-template-rows: max-content 200px 1fr;
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
 }
 
 .card:hover {
-    background-color: darkgrey;
-    color: black;
-    box-shadow: darkred -5px 5px;
-    transition-duration: 0.3s;
+  background-color: darkgrey;
+  color: black;
+  box-shadow: darkred -5px 5px;
+  transition-duration: 0.3s;
 }
 
-.giveUpBtnNav{
-    float: right;
-    margin-top: 8px;
-    margin-right: 10px;
-    background: darkgrey;
-    border: 3px solid darkgrey;
-    color: black;
-    font-family: cursive;
-    font-weight: bold;
+.giveUpBtnNav {
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+  background: darkgrey;
+  border: 3px solid darkgrey;
+  color: black;
+  font-family: inherit;
 }
 
-.restartBtnNav{
-    float: right;
-    margin-top: 8px;
-    margin-right: 10px;
-    background: yellow;
-    border: 3px solid yellow;
-    color: black;
-    font-family: cursive;
-    font-weight: bold;
+.restartBtnNav {
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+  background: yellow;
+  border: 3px solid yellow;
+  color: black;
+  font-family: inherit;
 }
 
 .giveUpBtnNav:hover {
-    background-color: darkgrey;
-    color: black;
-    box-shadow: black -5px 5px;
-    transition-duration: 0.3s;
+  background-color: darkgrey;
+  color: black;
+  box-shadow: black -5px 5px;
+  transition-duration: 0.3s;
 }
 
 .restartBtnNav:hover {
-    background-color: yellow;
-    color: black;
-    box-shadow: black -5px 5px;
-    transition-duration: 0.3s;
+  background-color: yellow;
+  color: black;
+  box-shadow: black -5px 5px;
+  transition-duration: 0.3s;
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
-
-
-
-    
-
-
-
-
-
-  
